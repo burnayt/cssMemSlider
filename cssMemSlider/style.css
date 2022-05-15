@@ -115,12 +115,9 @@ input{
     .info{
         flex-direction: column-reverse;
         align-items: center;
-    }
-    .texts{
-        justify-content: center;
-    }
+    }    
     .text{
-        font-size:1rem;
+        /* font-size:1rem; */
         text-align: center;
         justify-content: center;
     }
