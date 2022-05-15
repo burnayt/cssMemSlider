@@ -42,8 +42,8 @@ label div{
     cursor: pointer;
     color:transparent;
     background-color:blue;
-    border: .5vw solid blue;
-    border-radius: 5vw;    
+    border: .25vw solid blue;
+    border-radius: 2vw;    
     user-select: none;
 }
 label:active{
