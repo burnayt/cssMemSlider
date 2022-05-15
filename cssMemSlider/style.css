@@ -1,0 +1,195 @@
+html{
+    --width:35vw;
+    --text-width:15vw;
+}
+body{
+    display:flex;
+    justify-content: center;    
+    background-color:black;
+    align-items: flex-start;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:1vw;
+}
+.labels{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+label{    
+    width:3vw;
+    height:3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color:transparent;
+    /* background-color:blue; */
+    /* border: .5vw solid blue; */
+    /* border-radius: 5vw;     */
+    user-select: none;
+}
+label:hover div{
+    background-color: yellow;
+    border-color: yellow;
+}
+label div{
+    width:1vw;
+    height:1vw;
+    display: block;    
+    cursor: pointer;
+    color:transparent;
+    background-color:blue;
+    border: .25vw solid blue;
+    border-radius: 2vw;    
+    user-select: none;
+}
+label:active{
+    background-color:white;
+    border-radius:1vw;
+}
+#r-1:checked ~ .container .labels [for="r-1"] div{
+    background-color: black; 
+}
+#r-2:checked ~ .container .labels [for="r-2"] div{
+    background-color: black; 
+}
+#r-3:checked ~ .container .labels [for="r-3"] div{
+    background-color: black; 
+}
+#r-4:checked ~ .container .labels [for="r-4"] div{
+    background-color: black; 
+}
+#r-5:checked ~ .container .labels [for="r-5"] div{
+    background-color: black; 
+}
+
+input{    
+    width:0vw;
+    height: 0vw;
+}
+
+.slides{    
+    width: var(--width);    
+    overflow: hidden;    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    /* height:75vh; */
+    background-color:black;
+    border-radius: 2vw;
+}
+
+.slide{
+    width: var(--width);
+    display: flex; 
+    overflow: hidden;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    background-color:black;
+    /* height: 40em;  */
+    transition: transform 1s;
+    flex-shrink: 0;
+    
+    
+}
+.slide img{
+    width:calc(var(--width));
+    background-color:black;
+}
+.window{    
+    display:flex;    
+    transition: transform 1s;
+}
+.info{
+    color:white;
+    display:flex;
+    width:var(--width);
+    justify-content: space-between;
+}
+@media (max-width: 640px){
+    .info{
+        flex-direction: column-reverse;
+        align-items: center;
+    }    
+    .text{
+        /* font-size:1rem; */
+        text-align: center;
+        justify-content: center;
+    }
+}
+.texts{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    width: var(--text-width);
+    
+}
+.text-window{
+    display: flex;    
+    width: 100vw;
+    transition: transform 1s;
+    transform:translateX(vw)
+}
+.text{
+    width:15vw;
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* vertical-align: baseline; */
+    font-size: 1.5vw;
+    /* padding: 1vw; */
+}
+#r-1:checked ~ .container .info .text-window{
+    transform: translateX(0vw);
+}
+#r-2:checked ~ .container .info .text-window{
+    transform: translateX(calc(-1*var(--text-width)));
+}
+#r-3:checked ~ .container .info .text-window{
+    transform: translateX(calc(-2*var(--text-width)));
+}
+#r-4:checked ~ .container .info .text-window{
+    transform: translateX(calc(-3*var(--text-width)));
+}
+#r-5:checked ~ .container .info .text-window{
+    transform: translateX(calc(-4*var(--text-width)));
+}
+
+#r-1:checked ~ .container .slides .window{
+    transform: translateX( calc( 
+        2*var(--width) 
+    ) );
+}
+
+#r-2:checked ~ .container .slides .window{
+    transform: translateX(calc(var(--width)));
+}
+#r-3:checked ~ .container .slides .window{
+    transform: translateX(0vw);
+}
+#r-4:checked ~ .container .slides .window{
+    transform: translateX(calc(-1*var(--width)));
+}
+#r-5:checked ~ .container .slides .window{
+    transform: translateX(calc(-2*var(--width)));
+}
+/* #r-1:checked ~ .slides #s-1{
+    transform: translateX(127.5vw);
+}
+#r-2:checked ~ .slides #s-2{
+    transform: translateX(102.5vw);
+}
+#r-3:checked ~ .slides #s-3{
+    transform: translateX(77.5vw);
+}
+#r-4:checked ~ .slides #s-4{
+    transform: translateX(52.5vw);
+}
+#r-5:checked ~ .slides #s-5{
+    transform: translateX(27.5vw);
+} */
