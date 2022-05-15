@@ -46,6 +46,10 @@ label div{
     border-radius: 5vw;    
     user-select: none;
 }
+label:active{
+    background-color:white;
+    border-radius:1vw;
+}
 #r-1:checked ~ .container .labels [for="r-1"] div{
     background-color: black; 
 }
@@ -63,14 +67,13 @@ label div{
 }
 
 input{    
-    width:0px;
-    height: 0px;
+    width:0vw;
+    height: 0vw;
 }
 
 .slides{    
     width: var(--width);    
-    overflow: hidden;
-    /* border:1px solid black; */
+    overflow: hidden;    
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -91,20 +94,15 @@ input{
     /* height: 40em;  */
     transition: transform 1s;
     flex-shrink: 0;
-    /* border:1px solid black; */
+    
     
 }
 .slide img{
     width:calc(var(--width));
     background-color:black;
 }
-.window{
-    /* width: 100vw; */
-    
-    /* transform:translateX(50vw); */
-    /* height: 500px; */
-    display:flex;
-    /* flex-shrink: 0; */
+.window{    
+    display:flex;    
     transition: transform 1s;
 }
 .info{
